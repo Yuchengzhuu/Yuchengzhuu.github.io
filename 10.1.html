@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+    <meta name="description" content="Hello">
+    <!-- import aframe js library -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- aframe extras -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+
+<body>
+    <!-- every aframe scene starts with a-scene tag -->
+    <a-scene stats>
+        <!-- asset section  -->
+        <a-assets>
+            <img id="sky" src="img/back.jpg">
+            <a-asset-item id="model" src="phoenix_bird/scene.gltf"></a-asset-item>
+            <a-model position="0 2 -5" ></a-model>
+        </a-assets>
+        <!-- sky -->
+        <a-sky src="#sky"></a-sky>
+
+        <a-entity gltf-model="#model" animation-mixer></a-entity>
+
+        <a-sound src="sea.mp3" autoplay="true"
+        position="-3 1 -4"></a-sound>
+    </a-scene>
+
+</body>
+
+</html>
